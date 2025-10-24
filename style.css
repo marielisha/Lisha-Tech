@@ -1,0 +1,133 @@
+/* Simple and clear styles for Lisha Tech */
+:root{
+  --bg:#ffffff;
+  --muted:#6b7280;
+  --accent:#0b6efd;
+  --card:#f8fafc;
+  --max-width:1100px;
+  --radius:8px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: light;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:#111827;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{
+  width:calc(100% - 32px);
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:32px 16px;
+}
+
+.site-header{
+  border-bottom:1px solid #e6e9ee;
+  background:#fff;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand h1{
+  margin:0;
+  font-size:1.25rem;
+  letter-spacing:0.4px;
+}
+.tagline{
+  margin:2px 0 0;
+  color:var(--muted);
+  font-size:0.9rem;
+  text-transform:lowercase;
+}
+
+.main-nav ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  gap:12px;
+}
+.main-nav a{
+  color:var(--muted);
+  text-decoration:none;
+  font-weight:600;
+  padding:8px 10px;
+  border-radius:6px;
+}
+.main-nav a:hover{ background:#f1f5f9; color:var(--accent) }
+
+.hero{
+  padding:48px 0;
+  background:linear-gradient(180deg, #fbfdff 0%, #ffffff 100%);
+  text-align:center;
+}
+.hero .lead{ color:var(--muted); max-width:780px; margin:10px auto 20px; }
+.btn{
+  display:inline-block;
+  padding:10px 16px;
+  background:var(--accent);
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:600;
+  margin-right:8px;
+}
+.btn.ghost{ background:transparent; color:var(--accent); border:1px solid #e6eefb }
+
+h3{ margin-top:0 }
+
+.services .grid,
+.products .grid{
+  display:grid;
+  gap:16px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  margin-top:16px;
+}
+.card, .product{
+  background:var(--card);
+  padding:18px;
+  border-radius:var(--radius);
+  border:1px solid #eef2f6;
+}
+.build ol{ padding-left:20px }
+
+.note{ color:var(--muted); margin-top:10px }
+
+.contact .social{
+  margin-top:8px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.contact a{ color:var(--accent); text-decoration:none; font-weight:600 }
+
+.small{ color:var(--muted); font-size:0.95rem }
+
+.site-footer{
+  border-top:1px solid #e6e9ee;
+  margin-top:40px;
+  background:#fff;
+  padding:18px 0;
+}
+.footer-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.footer-right{ text-align:right }
+
+@media (max-width:720px){
+  .header-inner{ flex-direction:column; gap:12px; align-items:flex-start}
+  .main-nav ul{ flex-wrap:wrap }
+  .footer-inner{ flex-direction:column; align-items:flex-start; gap:8px }
+  .brand h1{ font-size:1.15rem }
+}
